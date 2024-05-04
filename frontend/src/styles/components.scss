@@ -1,0 +1,11 @@
+.button-base {
+  border-radius: 6px;
+  padding: 6px 10px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--grey-10);
+  outline: none;
+  border: none;
+}
