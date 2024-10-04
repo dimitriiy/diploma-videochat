@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register</title>
+
+    <link rel="stylesheet" href="../../src/styles/reset.css" />
+    <link rel="stylesheet" href="../../src/styles/vars.css" />
+    <link rel="stylesheet" href="../../src/styles/fonts.scss" />
+    <link rel="stylesheet" href="../../src/styles/components.scss" />
+    <link rel="stylesheet" href="../../src/styles/blocks/chat.scss" />
+    <link rel="stylesheet" href="../../src/styles/main.scss" />
+    <link rel="stylesheet" href="../../src/styles/forms.scss" />
+    <link rel="stylesheet" href="../../src/styles/utils.scss" />
+    <link rel="stylesheet" href="../../src/styles/typography.scss" />
+
+    <link rel="stylesheet" href="../../src/styles/blocks/register.scss" />
+  </head>
+
+  <body>
+    <div id="root">
+      <div class="bg-overlay"></div>
+      <div class="form-register">
+        <form action="" class="form" autocomplete="off">
+          <h2 class="h2 text-center">Создать аккаунт</h2>
+
+          <div class="form__row">
+            <div class="text-field">
+              <input id="name" type="text" class="text-field__input" placeholder=" " />
+              <label for="name" class="text-field__label">Имя</label>
+            </div>
+          </div>
+
+          <div class="form__row">
+            <div class="text-field">
+              <input id="email" type="text" class="text-field__input" placeholder=" " />
+              <label for="email" class="text-field__label">Email</label>
+            </div>
+          </div>
+
+          <div class="form__row">
+            <div class="text-field">
+              <input id="password" type="text" class="text-field__input" placeholder=" " />
+              <label for="password" class="text-field__label">Пароль</label>
+            </div>
+          </div>
+          <div class="form__row">
+            <button class="button-base form__btn-submit">Register</button>
+          </div>
+
+          <div class="text-center"><a href="/pages/login/index.html">У меня уже есть аккаунт</a></div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

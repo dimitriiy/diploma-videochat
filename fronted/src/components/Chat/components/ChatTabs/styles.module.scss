@@ -1,0 +1,26 @@
+.chat-tabs {
+  display: flex;
+  list-style: none;
+  width: 100%;
+  gap: var(--x10-space);
+  padding-bottom: var(--x16-space);
+  border-bottom: 1px solid hsl(var(--grey-0));
+  &__item {
+    flex: 1;
+  }
+  &__item button {
+    width: 100%;
+    border-radius: var(--x4-space);
+    padding: var(--x8-space);
+    background: none;
+    font-weight: 500;
+    font-size: 15px;
+    color: var(--grey-1-1);
+    cursor: pointer;
+  }
+
+  &__item--active button {
+    color: #fff;
+    background: hsl(var(--grey-6));
+  }
+}

@@ -1,0 +1,27 @@
+.nav-list {
+  &__item {
+    margin-bottom: var(--x7-space);
+  }
+  &__link {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+
+    &--active {
+      background: var(--grey-3);
+
+      &::after {
+        content: "";
+        width: 2px;
+        background: #fff;
+        height: 100%;
+        position: absolute;
+        right: -23px;
+        top: 0;
+      }
+    }
+  }
+}

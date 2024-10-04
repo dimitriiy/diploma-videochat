@@ -1,0 +1,45 @@
+.player-header {
+  padding: var(--x5-space) 0;
+  &__top {
+    display: flex;
+    align-items: center;
+    padding-bottom: var(--x18-space);
+    border-bottom: 1px solid hsl(var(--grey-1));
+  }
+  &__title-room {
+    font-family: var(--second-family);
+    font-weight: 900;
+    font-size: 20px;
+    color: var(--font-color-primary);
+    padding: 0 var(--x10-space);
+  }
+
+  &__bottom {
+    display: flex;
+    padding-top: var(--x13-space);
+    justify-content: space-between;
+  }
+
+  &__rec {
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    font-size: 12px;
+    color: var(--grey-0);
+    img {
+      margin-right: var(--x4-space);
+    }
+  }
+
+  &__add-user {
+    font-weight: 500;
+    font-size: 12px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+  }
+
+  &__add-user-btn {
+    margin-left: var(--x2-space);
+  }
+}

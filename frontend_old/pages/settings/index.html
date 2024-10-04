@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Settings</title>
+
+    <link rel="stylesheet" href="../../src/styles/reset.css" />
+    <link rel="stylesheet" href="../../src/styles/vars.css" />
+    <link rel="stylesheet" href="../../src/styles/fonts.scss" />
+    <link rel="stylesheet" href="../../src/styles/components.scss" />
+    <link rel="stylesheet" href="../../src/styles/blocks/chat.scss" />
+    <link rel="stylesheet" href="../../src/styles/main.scss" />
+    <link rel="stylesheet" href="../../src/styles/forms.scss" />
+    <link rel="stylesheet" href="../../src/styles/utils.scss" />
+
+    <link rel="stylesheet" href="../../src/styles/blocks/settings.scss" />
+  </head>
+
+  <body>
+    <div id="root">
+      <div class="content">
+        <div class="sidebar">
+          <a href="/" class="logo">
+            <img src="../../src/assets/logo.svg" alt="" />
+          </a>      <nav class="nav">
+          <ul class="nav-list">
+            <li class="nav-list__item">
+              <a href="pages/nested/index.html" class="nav-list__link">
+                <img src="./src/assets/icons/home.svg" alt="" />
+              </a>
+            </li>
+            <li class="nav-list__item">
+              <a href="/" class="nav-list__link nav-list__link--active">
+                <img src="./src/assets/icons/camera.svg" alt="" />
+              </a>
+            </li>
+            <li class="nav-list__item">
+              <a href="pages/settings/index.html" class="nav-list__link">
+                <img src="./src/assets/icons/tool.svg" alt="" />
+              </a>
+            </li>
+          </ul>
+          </nav>
+          <div class="user-avatar">
+            <img src="../../src/assets/avatar.png" alt="" />
+          </div>
+        </div>
+        <main class="main">
+          <div class="settings">
+            <div class="settings__nav">
+              <ul class='settings__tabs'>
+                <li data-section='user' class='settings__tabs-item'><img src='../../src/assets/icons/users.svg' alt=''> Данные пользователя</li>
+                <li data-section='settings'  class='settings__tabs-item'> <img src='../../src/assets/icons/camera.svg' alt=''> Настройки видео</li>
+              </ul>
+            </div>
+            <div class="settings__block">
+                            <div data-section='user' class="user-settings show">
+                              <div class="user-settings__pic">
+                                <img src="../../src/assets/avatar.png" alt="" />
+                                <button class="button-base user-settings__pic-upload">Загрузить</button>
+                              </div>
+                              <div class="user-settings__data">
+                                <form action="" class="form">
+                                  <form action="" class="form" autocomplete="off">
+                                    <div class="form__row">
+                                      <div class="text-field">
+                                        <input id="name" type="text" class="text-field__input" placeholder=" " value="Дмитрий" />
+                                        <label for="name" class="text-field__label">Имя</label>
+                                      </div>
+                                    </div>
+
+                                    <div class="form__row">
+                                      <div class="text-field">
+                                        <input
+                                          id="email"
+                                          type="text"
+                                          class="text-field__input"
+                                          placeholder=" "
+                                          readonly
+                                          value="amsds@mail.ru"
+                                        />
+                                        <label for="email" class="text-field__label">Email</label>
+                                      </div>
+                                    </div>
+                                    <div class="form__row">
+                                      <div class="text-field">
+                                        <input id="old-password" type="text" class="text-field__input" placeholder=" " />
+                                        <label for="old-password" class="text-field__label">Старый пароль</label>
+                                      </div>
+                                    </div>
+                                    <div class="form__row">
+                                      <div class="text-field">
+                                        <input id="password" type="text" class="text-field__input" placeholder=" " />
+                                        <label for="password" class="text-field__label">Новый пароль</label>
+                                      </div>
+                                    </div>
+                                    <div class="form__row">
+                                      <button class="button-base form__btn-submit">Сохранить</button>
+                                    </div>
+                                  </form>
+                                </form>
+                              </div>
+                            </div>
+
+              <div class="device-settings hide" data-section='settings'>
+                <div class='device-settings__row'>
+                  <div class='device-settings__label'>Микрофон</div>
+                  <div class="select">
+                    <button class="select__btn">Default - Внешние наушники (Built-in)</button>
+                    <div class="select__dropdown select__dropdown--inactive">
+                      <div class="select__dropdown__item">Default - Внешние наушники (Built-in)</div>
+                      <div class="select__dropdown__item">Redmi 27 NU (DisplayPort)</div>
+                      <div class="select__dropdown__item">Microsoft Teams Audio Device (Virtual)</div>
+                    </div>
+                </div>
+              </div>
+                <div class='device-settings__row'>
+                  <div class='device-settings__label'>Вывод звука</div>
+                  <div class="select">
+                    <button class="select__btn">Default - Внешние наушники (Built-in)</button>
+                    <div class="select__dropdown select__dropdown--inactive">
+                      <div class="select__dropdown__item">Default - Внешние наушники (Built-in)</div>
+                      <div class="select__dropdown__item">Redmi 27 NU (DisplayPort)</div>
+                      <div class="select__dropdown__item">Microsoft Teams Audio Device (Virtual)</div>
+                    </div>
+                  </div>
+                </div>
+                <div class='device-settings__row'>
+                  <div class='device-settings__label'>Камера</div>
+                  <div class="select">
+                    <button class="select__btn">Default - Внешние наушники (Built-in)</button>
+                    <div class="select__dropdown select__dropdown--inactive">
+                      <div class="select__dropdown__item">Default - Внешние наушники (Built-in)</div>
+                      <div class="select__dropdown__item">Redmi 27 NU (DisplayPort)</div>
+                      <div class="select__dropdown__item">Microsoft Teams Audio Device (Virtual)</div>
+                    </div>
+                  </div>
+
+                  <div class='device-settings__camera-demo'>
+                    <video id="camera-stream"  loop muted>
+                      <source src="" />
+                    </video>
+                  </div>
+                </div>
+
+              </div>
+          </div>
+        </main>
+      </div>
+    </div>
+    <script>
+
+      const cameraVideoStream = document.getElementById("camera-stream");
+
+      if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia({ video: true })) {
+        navigator.mediaDevices.getUserMedia({ video: true }).then((stream) => {
+          cameraVideoStream.srcObject = stream;
+          cameraVideoStream.play();
+        });
+
+      }
+
+
+      document.querySelectorAll('.select__btn').forEach(btn => {
+        btn.addEventListener("click", (e) => {
+          const dropdown = e.target.closest('.select').querySelector(".select__dropdown");
+          if (dropdown.classList.contains("select__dropdown--inactive")) {
+            dropdown.classList.remove("select__dropdown--inactive");
+          } else {
+            dropdown.classList.add("select__dropdown--inactive");
+          }
+          console.log(dropdown);
+        });
+      })
+
+      document.querySelectorAll('.settings__tabs-item').forEach(el => {
+        el.addEventListener('click',(e) => {
+          const section = e.target.dataset.section;
+          if(!section)return;
+
+          const blocks = document.querySelectorAll(`.settings__block [data-section]`);
+          blocks.forEach(b => {
+            if(b.classList.contains('show')) {
+              b.classList.remove('show');
+              b.classList.add('hide')
+            }
+          })
+          const block = document.querySelector(`.settings__block [data-section=${section}]`);
+          block?.classList.add('show');
+          block?.classList.remove('hide');
+        })
+      })
+
+    </script>
+  </body>
+</html>

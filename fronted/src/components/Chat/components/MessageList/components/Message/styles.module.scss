@@ -1,0 +1,61 @@
+.message {
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: var(--x12-space);
+
+  &--iam {
+    display: flex;
+    justify-content: flex-end;
+  }
+  &__user-pic {
+    border-radius: 100%;
+    overflow: hidden;
+    flex: 0 0 46px;
+    height: 46px;
+    margin-right: var(--x8-space);
+  }
+  &__text {
+    font-weight: 500;
+    color: #fff;
+  }
+
+  &__date {
+    font-weight: 500;
+    font-size: 10px;
+    color: hsl(var(--grey-0));
+  }
+
+  &__user-name {
+    font-weight: 500;
+    color: #fff;
+    margin-bottom: var(--x2-space);
+  }
+
+  &__content {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    background: hsl(var(--grey-11));
+    padding: var(--x10-space) var(--x16-space) var(--x10-space) var(--x8-space);
+    min-width: 110px;
+    border-radius: 0 6px 6px 6px;
+  }
+  &__date {
+    margin-left: auto;
+    padding-left: var(--x4-space);
+  }
+
+  &__mark-as-read {
+    padding-right: var(--x12-space);
+  }
+  &--iam &__user-name {
+    text-align: right;
+  }
+
+  &--iam &__content {
+    background: hsl(var(--dark-blue));
+    border-radius: 6px 0px 6px 6px;
+  }
+}

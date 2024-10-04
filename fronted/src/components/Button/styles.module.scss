@@ -1,0 +1,31 @@
+.button-base {
+  border-radius: 6px;
+  color: var(--font-color-primary);
+  background: hsl(var(--grey-10));
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  outline: none;
+  border: none;
+  position: relative;
+
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.1s linear;
+  &--stretch {
+    width: 100%;
+  }
+
+  &--small {
+    padding: var(--x3-space) var(--x4-space);
+  }
+
+  &--medium {
+    padding: var(--x8-space);
+  }
+
+  &:hover {
+    background: hsl(var(--grey-10), 0.8);
+  }
+}

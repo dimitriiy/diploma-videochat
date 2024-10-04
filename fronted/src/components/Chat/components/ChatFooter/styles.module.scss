@@ -1,0 +1,74 @@
+.chat-input {
+  position: relative;
+
+  &__input {
+    display: block;
+    width: 100%;
+    border-radius: var(--x4-space);
+    height: 69px;
+    background: hsl(var(--grey-10));
+    border: none;
+    outline: none;
+    color: #fff;
+    padding: 0 66px 0 75px;
+    &::placeholder {
+      color: #fff;
+    }
+  }
+
+  &__file {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 22px;
+    background: none;
+  }
+
+  &__send {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 6px;
+    width: 45px;
+    height: 45px;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__divider {
+    position: absolute;
+    left: 65px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1px;
+    height: 40%;
+    background: #fff;
+  }
+}
+
+.chat-noty-typing {
+  display: flex;
+  align-items: center;
+  padding: var(--x6-space) 0;
+  &__indicator {
+    box-shadow: 0 4px 21px 0 rgba(0, 0, 0, 0.1);
+    background: #748393;
+    border-radius: 100%;
+    width: 30px;
+    height: 30px;
+    overflow: hidden;
+    margin-right: var(--x6-space);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__text {
+    font-weight: 500;
+    font-size: 12px;
+    color: #bfbfbf;
+  }
+}
