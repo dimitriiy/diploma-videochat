@@ -18,7 +18,6 @@ export const AppLayout = ({ children }: React.PropsWithChildren<Props>) => {
         <div className={classes.userAvatar}>
           <img src="./src/assets/avatar.png" alt="" />
         </div>
-        ` <ThemeToggler />`
       </div>
       <main className={classes.main}>{children}</main>
     </div>

@@ -11,18 +11,28 @@ export const FormField = (props: React.PropsWithChildren) => {
 };
 
 interface TextFieldProps {
-  label: string;
+  label?: string;
   value: string;
   placeholder?: string;
+  onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
-export const TextField = ({ label, value, placeholder = " " }: TextFieldProps) => {
+export const TextField = ({ label, value, placeholder = " ", onChange }: TextFieldProps) => {
   return (
     <div className={classes.textField}>
-      <input id="email" type="text" className={classes.textFieldInput} placeholder={placeholder} value={value} />
-      <label htmlFor="email" className={classes.textFieldLabel}>
-        {label}
-      </label>
+      <input
+        id="email"
+        type="text"
+        className={classes.textFieldInput}
+        placeholder={placeholder}
+        value={value}
+        onChange={onChange}
+      />
+      {label && (
+        <label htmlFor="email" className={classes.textFieldLabel}>
+          {label}
+        </label>
+      )}
     </div>
   );
 };

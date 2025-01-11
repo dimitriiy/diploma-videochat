@@ -28,4 +28,9 @@
   &:hover {
     background: hsl(var(--grey-10), 0.8);
   }
+
+  &--disabled {
+    background: hsl(var(--grey-10), 0.8);
+    cursor: no-drop;
+  }
 }
