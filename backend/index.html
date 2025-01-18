@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+<style>
+    body div {    display: flex;
+    align-items: start;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+    table {
+      border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    min-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    }
+
+    table thead tr {
+    background-color: #009879;
+    color: #ffffff;
+    text-align: left;
+}
+
+
+table th,
+table td {
+    padding: 9px;
+}
+
+</style>
+<h1>hello</h1>
+
+</body>
+<script>
+    const post = async (url, data) => {
+
+      const r  = await fetch(url, {
+        method: "POST",
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+
+  });
+
+  return r
+  }
+
+
+
+
+<!--    post('/create_user', {username:'username' + Math.random() ,'email':'email'})-->
+
+    fetch('/all').then(d => {d.json().then(d => generateTables(d))})
+
+
+    function generateTables(data) {
+    const container = document.createElement('div');
+    const tablesObj = JSON.parse(data.tables);
+    console.log({tablesObj})
+    Object.keys(tablesObj).forEach(tableName => {
+        const tableData = tablesObj[tableName].map(o => Object.values(o))
+        console.log(tableData)
+        const table = document.createElement('table');
+        const caption = document.createElement('caption');
+        caption.textContent = tableName;
+        table.appendChild(caption);
+
+        // Заголовки столбцов
+        const keys = Object.keys(tablesObj[tableName][0]??{});
+        const headerRow = document.createElement('tr');
+        keys?.forEach((col, index) => {
+
+            const th = document.createElement('th');
+            th.textContent = col;
+            headerRow.appendChild(th);
+        });
+        table.appendChild(headerRow);
+
+        // Строки данных
+        tableData.forEach(row => { // Начинаем с индекса 1, чтобы пропустить заголовки
+            const tr = document.createElement('tr');
+            tr.setAttribute('data-id',row[0])
+
+            tr.onclick = () => {
+
+            }
+
+
+
+            row.forEach(cell => {
+                const td = document.createElement('td');
+                td.textContent = typeof cell === 'object' ? JSON.stringify(cell):cell;
+
+                tr.appendChild(td);
+            });
+            table.appendChild(tr);
+        });
+
+        container.appendChild(table);
+    });
+
+     document.body.appendChild(container)
+
+
+}
+
+
+function addRoom(id) {
+  post("/create_room", { name: "room", settings: {v:true}, host_id:id });
+}
+
+
+</script>
+</html>

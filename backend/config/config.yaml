@@ -1,0 +1,5 @@
+common:
+  port: 4000 # порт, на котором будет запускаться наше приложение
+postgres:
+  database_url: postgres://admin:admin@localhost
+  require_ssl: false # стоит ли шифровать соединение с базой
