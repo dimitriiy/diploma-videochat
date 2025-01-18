@@ -1,0 +1,39 @@
+.content {
+  border: 2px solid var(--border-color);
+  border-radius: var(--x7-space);
+  display: flex;
+  height: 100%;
+  min-height: inherit;
+}
+.main {
+  padding: var(--x10-space);
+  height: inherit;
+  width: calc(100% - var(--nav-width));
+  margin-left: var(--nav-width);
+}
+
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  min-height: inherit;
+  width: var(--nav-width);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--x10-space) 0 var(--x16-space);
+  border-right: 1px solid var(--border-color);
+}
+
+.user-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+}
+
+.logo img {
+  width: 32px;
+  height: 32px;
+}

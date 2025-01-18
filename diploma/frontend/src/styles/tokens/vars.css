@@ -1,0 +1,41 @@
+:root {
+  --white-0: 0, 0%, 100%;
+  --grey-00: 0, 0%, 85%;
+  --grey-0: 0, 0%, 75%;
+  --grey-1-1: 0, 0%, 75%;
+  --grey-1: 213, 21%, 58%;
+  --grey-3: 212, 10%, 51%;
+  --grey-6: 211, 26%, 39%;
+  --grey-10: 210, 24%, 27%;
+  --grey-11: 213, 16%, 35%;
+  --green-1: 130, 99%, 41%;
+  --dark-blue: 215, 33%, 11%;
+  --red-1: 356, 100%, 49%;
+
+  --x0-space: 1px;
+  --x1-space: 2px;
+  --x2-space: 4px;
+  --x3-space: 6px;
+  --x4-space: 8px;
+  --x5-space: 10px;
+  --x6-space: 12px;
+  --x7-space: 14px;
+  --x8-space: 16px;
+
+  --x10-space: 20px;
+  --x11-space: 22px;
+  --x12-space: 24px;
+  --x13-space: 26px;
+
+  --x16-space: 32px;
+  --x18-space: 36px;
+
+  --nav-width: 80px;
+
+  --font-family: "FuturaPT", sans-serif;
+  --second-family: "FuturaHv", sans-serif;
+
+  --font-size-primary: 16px;
+
+  --border-radius: 15px;
+}
