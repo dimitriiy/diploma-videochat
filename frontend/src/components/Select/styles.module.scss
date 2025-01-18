@@ -1,0 +1,59 @@
+.select {
+  width: 300px;
+  position: relative;
+  &__btn {
+    background: hsl(var(--grey-10));
+    padding: 10px 15px;
+    color: #fff;
+    border-radius: 5px;
+    width: 100%;
+    cursor: pointer;
+    &::after {
+      content: "";
+      display: inline-block;
+      width: 15px;
+      height: 15px;
+      color: red;
+      background: url("../assets/icons/arrow-top-bottom.svg") no-repeat center;
+    }
+    &:active {
+      transform: scale(0.95);
+    }
+  }
+
+  &__dropdown {
+    position: absolute;
+    background: hsl(var(--grey-10));
+    border-radius: 5px;
+    width: 100%;
+    transition: 0.2s ease-out;
+    z-index: 10;
+    visibility: hidden;
+    transform: translate3d(0, 10px, 0);
+    opacity: 0;
+
+    &--active {
+      transform: translate3d(0, 5px, 0);
+      opacity: 1;
+      visibility: visible;
+    }
+
+    &__item {
+      padding: 10px 15px;
+
+      &:hover {
+        cursor: pointer;
+        background: hsl(var(--grey-6));
+      }
+    }
+  }
+}
+
+.overlay {
+  background: #ccc;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+}

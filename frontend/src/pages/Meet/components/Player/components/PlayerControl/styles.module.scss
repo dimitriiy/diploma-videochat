@@ -1,0 +1,58 @@
+.player-control {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  bottom: var(--x16-space);
+  transform: translateX(-50%);
+  left: 50%;
+  color: #fff;
+  & > * {
+    margin: 0 var(--x6-space);
+  }
+  &__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 100%;
+    background: rgba(0, 0, 0, 0.52);
+    backdrop-filter: blur(40px);
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: background 0.3s linear;
+
+    &--toggle::after {
+      content: "";
+      background: #fff;
+      position: absolute;
+      width: 2px;
+      height: 45%;
+      left: 23px;
+      transform: rotate(45deg);
+    }
+    &:hover {
+      background: rgba(0, 0, 0, 0.8);
+    }
+  }
+
+  &__button-cancel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    width: 73px;
+    height: 63px;
+    background: hsl(var(--red-1), 0.85);
+
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: opacity 0.3s linear;
+
+    &:hover {
+      background: hsl(var(--red-1));
+    }
+  }
+}

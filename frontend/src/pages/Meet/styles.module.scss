@@ -1,0 +1,16 @@
+.root {
+  height: inherit;
+  display: grid;
+  grid-template-areas: "video-hero chat";
+  grid-template-columns: 3fr minmax(350px, 1fr);
+  width: 100%;
+  grid-gap: var(--x10-space);
+}
+
+.player-section {
+  grid-area: video-hero;
+  height: 100%;
+  min-height: inherit;
+  display: flex;
+  flex-direction: column;
+}
